@@ -15,10 +15,6 @@
 		E3280537253486D8009B38F8 /* ListaReparti.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3280536253486D8009B38F8 /* ListaReparti.swift */; };
 		E328053B25348992009B38F8 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E328053A25348992009B38F8 /* DataModel.swift */; };
 		E363D65A25349ECB00A5B2DC /* SpecificSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E363D65925349ECB00A5B2DC /* SpecificSettingsViewController.swift */; };
-		E363D65F2534B8DF00A5B2DC /* SettingsFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E363D65E2534B8DF00A5B2DC /* SettingsFormView.swift */; };
-		E363D6632534B91500A5B2DC /* SettingsFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E363D6622534B91500A5B2DC /* SettingsFormView.xib */; };
-		E363D6672534C05C00A5B2DC /* NestedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E363D6652534C05C00A5B2DC /* NestedTableViewCell.swift */; };
-		E363D6682534C05C00A5B2DC /* NestedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E363D6662534C05C00A5B2DC /* NestedTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +28,6 @@
 		E3280536253486D8009B38F8 /* ListaReparti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaReparti.swift; sourceTree = "<group>"; };
 		E328053A25348992009B38F8 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		E363D65925349ECB00A5B2DC /* SpecificSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificSettingsViewController.swift; sourceTree = "<group>"; };
-		E363D65E2534B8DF00A5B2DC /* SettingsFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFormView.swift; sourceTree = "<group>"; };
-		E363D6622534B91500A5B2DC /* SettingsFormView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsFormView.xib; sourceTree = "<group>"; };
-		E363D6652534C05C00A5B2DC /* NestedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedTableViewCell.swift; sourceTree = "<group>"; };
-		E363D6662534C05C00A5B2DC /* NestedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NestedTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +93,6 @@
 		E363D65D2534B89500A5B2DC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E363D65E2534B8DF00A5B2DC /* SettingsFormView.swift */,
-				E363D6622534B91500A5B2DC /* SettingsFormView.xib */,
-				E363D6652534C05C00A5B2DC /* NestedTableViewCell.swift */,
-				E363D6662534C05C00A5B2DC /* NestedTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,9 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E363D6682534C05C00A5B2DC /* NestedTableViewCell.xib in Resources */,
 				E328052D25348400009B38F8 /* LaunchScreen.storyboard in Resources */,
-				E363D6632534B91500A5B2DC /* SettingsFormView.xib in Resources */,
 				E328052A25348400009B38F8 /* Assets.xcassets in Resources */,
 				E3280528253483FF009B38F8 /* Main.storyboard in Resources */,
 			);
@@ -183,11 +169,9 @@
 			files = (
 				E3280537253486D8009B38F8 /* ListaReparti.swift in Sources */,
 				E328053B25348992009B38F8 /* DataModel.swift in Sources */,
-				E363D6672534C05C00A5B2DC /* NestedTableViewCell.swift in Sources */,
 				E3280521253483FF009B38F8 /* AppDelegate.swift in Sources */,
 				E363D65A25349ECB00A5B2DC /* SpecificSettingsViewController.swift in Sources */,
 				E3280523253483FF009B38F8 /* SceneDelegate.swift in Sources */,
-				E363D65F2534B8DF00A5B2DC /* SettingsFormView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
