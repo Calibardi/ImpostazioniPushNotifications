@@ -43,15 +43,10 @@ class ListaReparti: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RepartoCell", for: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NestedTableViewCell", for: indexPath) as! CustomCell
 
         // Configure the cell...
         cell.nameLabel.text = reparti[indexPath.row]
-//        cell.backgroundColor = UIColor.white
-//        cell.layer.borderColor = UIColor.black.cgColor
-//        cell.layer.borderWidth = 1
-//        cell.layer.cornerRadius = 8
-//        cell.clipsToBounds = true
         return cell
     }
     
@@ -63,7 +58,10 @@ class ListaReparti: UITableViewController {
            return 44
        }
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "showDetailedSettings", sender: self)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
