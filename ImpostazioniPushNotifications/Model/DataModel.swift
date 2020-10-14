@@ -14,6 +14,7 @@ struct generalModelStruct {
     var treshold: Int = 0
 }
 
+//Singleton pattern
 public class dataModel {
     var stores = [generalModelStruct]()
     var reparti = [generalModelStruct]()
