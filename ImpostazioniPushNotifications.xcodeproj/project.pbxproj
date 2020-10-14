@@ -14,8 +14,11 @@
 		E328052D25348400009B38F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E328052B25348400009B38F8 /* LaunchScreen.storyboard */; };
 		E3280537253486D8009B38F8 /* ListaReparti.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3280536253486D8009B38F8 /* ListaReparti.swift */; };
 		E328053B25348992009B38F8 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E328053A25348992009B38F8 /* DataModel.swift */; };
+		E365B6862536DE3D00289E22 /* ReusableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E365B6842536DE3D00289E22 /* ReusableTableViewCell.swift */; };
+		E365B6872536DE3D00289E22 /* ReusableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E365B6852536DE3D00289E22 /* ReusableTableViewCell.xib */; };
 		E3CC5F3F2535AA78002C5547 /* ReusableCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC5F3E2535AA78002C5547 /* ReusableCustomCell.swift */; };
 		E3CC5F422535B200002C5547 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC5F412535B200002C5547 /* SettingsViewController.swift */; };
+		E3CC5F46253602CF002C5547 /* ListaNegoziViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC5F45253602CF002C5547 /* ListaNegoziViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +31,11 @@
 		E328052E25348400009B38F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3280536253486D8009B38F8 /* ListaReparti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaReparti.swift; sourceTree = "<group>"; };
 		E328053A25348992009B38F8 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		E365B6842536DE3D00289E22 /* ReusableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTableViewCell.swift; sourceTree = "<group>"; };
+		E365B6852536DE3D00289E22 /* ReusableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableTableViewCell.xib; sourceTree = "<group>"; };
 		E3CC5F3E2535AA78002C5547 /* ReusableCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCustomCell.swift; sourceTree = "<group>"; };
 		E3CC5F412535B200002C5547 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E3CC5F45253602CF002C5547 /* ListaNegoziViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaNegoziViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +73,6 @@
 				E363D65C2534B87B00A5B2DC /* Controller */,
 				E3280520253483FF009B38F8 /* AppDelegate.swift */,
 				E3280522253483FF009B38F8 /* SceneDelegate.swift */,
-				E3280526253483FF009B38F8 /* Main.storyboard */,
 				E328052925348400009B38F8 /* Assets.xcassets */,
 				E328052B25348400009B38F8 /* LaunchScreen.storyboard */,
 				E328052E25348400009B38F8 /* Info.plist */,
@@ -88,6 +93,7 @@
 			children = (
 				E3280536253486D8009B38F8 /* ListaReparti.swift */,
 				E3CC5F412535B200002C5547 /* SettingsViewController.swift */,
+				E3CC5F45253602CF002C5547 /* ListaNegoziViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -96,6 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				E3CC5F3E2535AA78002C5547 /* ReusableCustomCell.swift */,
+				E365B6842536DE3D00289E22 /* ReusableTableViewCell.swift */,
+				E365B6852536DE3D00289E22 /* ReusableTableViewCell.xib */,
+				E3280526253483FF009B38F8 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E365B6872536DE3D00289E22 /* ReusableTableViewCell.xib in Resources */,
 				E328052D25348400009B38F8 /* LaunchScreen.storyboard in Resources */,
 				E328052A25348400009B38F8 /* Assets.xcassets in Resources */,
 				E3280528253483FF009B38F8 /* Main.storyboard in Resources */,
@@ -174,7 +184,9 @@
 				E3CC5F422535B200002C5547 /* SettingsViewController.swift in Sources */,
 				E3280537253486D8009B38F8 /* ListaReparti.swift in Sources */,
 				E328053B25348992009B38F8 /* DataModel.swift in Sources */,
+				E365B6862536DE3D00289E22 /* ReusableTableViewCell.swift in Sources */,
 				E3280521253483FF009B38F8 /* AppDelegate.swift in Sources */,
+				E3CC5F46253602CF002C5547 /* ListaNegoziViewController.swift in Sources */,
 				E3280523253483FF009B38F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

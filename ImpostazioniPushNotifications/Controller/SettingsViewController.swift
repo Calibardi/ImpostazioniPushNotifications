@@ -13,9 +13,9 @@ class tempCustomCell: UITableViewCell {
 }
 //MARK: - Controller
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-//    MARK: - Proprietà
+    //    MARK: - Attributi
     @IBOutlet weak var tableViewSemplice: UITableView!
-//    MARK: - Metodi
+    //    MARK: - Metodi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableViewSemplice.delegate = self
@@ -23,17 +23,32 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tempCustomCella", for: indexPath)
-            as! tempCustomCell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "tempCustomCella", for: indexPath)
+                as! tempCustomCell
+            
+            cell.selectionArrow.image = UIImage(systemName: "chevron.right")
+            cell.selectionArrow.tintColor = UIColor.gray
+            cell.textLabel?.text = "Impostazioni di notifica per manager"
+            return cell
+        } else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "tempCustomCella2", for: indexPath)
+                as! tempCustomCell
+            
+            cell.selectionArrow.image = UIImage(systemName: "chevron.right")
+            cell.selectionArrow.tintColor = UIColor.gray
+            cell.textLabel?.text = "Impostazioni di not. per direttore vendite"
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "tempCustomCella", for: indexPath)
+                as! tempCustomCell
+            return cell
+        }
         
-        cell.selectionArrow.image = UIImage(systemName: "chevron.right")
-        cell.selectionArrow.tintColor = UIColor.gray
-        cell.textLabel?.text = "Impostazioni di notifica"
-        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -16,7 +16,7 @@ import UIKit
 //MARK: - Controller
 class ListaReparti: UITableViewController {
     
-//    MARK: - Proprietà
+//    MARK: - Attributi
     let reparti = dataModel.sharedData.reparti
     var selectedIndex = -1
     var isCollapse = false
@@ -32,7 +32,6 @@ class ListaReparti: UITableViewController {
         //        tableView.rowHeight = 100.0
         tableView.estimatedRowHeight = 248
         tableView.rowHeight = UITableView.automaticDimension
-        navigationController?.title = "Gestione notifiche"
         navigationItem.largeTitleDisplayMode = .never
     }
     
