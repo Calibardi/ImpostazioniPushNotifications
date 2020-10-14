@@ -15,7 +15,10 @@ class ListaNegoziViewController: UIViewController {
     var searchResults = [String]()
     var hasSearched: Bool = false
     var datas = dataModel.sharedData
+    let alertNoResults = UIAlertController(title: "Attenzione", message: "Non sono stati trovati risultati per il valore ricercato", preferredStyle: .alert)
     
+    
+//    MARK: - Metodi
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.placeholder = "Ricerca negozi..."
@@ -26,9 +29,15 @@ class ListaNegoziViewController: UIViewController {
         self.tblView.dataSource = self
         self.searchBar.delegate = self
         
+        alertNoResults.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        
         let cellNib = UINib(nibName: "ReusableTableViewCell", bundle: nil)
         tblView.register(cellNib, forCellReuseIdentifier: "reusableTableViewCell")
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func showAlert() {
+        
     }
 }
 //MARK: - Estensioni
@@ -40,6 +49,9 @@ extension ListaNegoziViewController: UISearchBarDelegate {
             if searchBar.text == datas.stores[i].name {
                 searchResults.append(String(format: "%@", searchBar.text!))
             }
+        }
+        if searchResults.isEmpty {
+            self.present(alertNoResults, animated: true, completion: nil)
         }
         self.hasSearched = true
         tblView.reloadData()
@@ -57,7 +69,7 @@ extension ListaNegoziViewController: UITableViewDelegate, UITableViewDataSource 
         if !hasSearched {
             return datas.stores.count
         } else if searchResults.count == 0 {
-            return 1
+            return 0
         } else {
             return searchResults.count
         }
@@ -70,7 +82,8 @@ extension ListaNegoziViewController: UITableViewDelegate, UITableViewDataSource 
         
         if hasSearched{
             if searchResults.count == 0 {
-                cell.nameLabel.text = "Nessun negozio trovato"
+//                cell.nameLabel.text = "Nessun negozio trovato"
+                /*Soluzione errata per notificare che la ricerca non ha avuto risultati*/
             } else {
                 cell.nameLabel?.text = searchResults[indexPath.row]
             }
