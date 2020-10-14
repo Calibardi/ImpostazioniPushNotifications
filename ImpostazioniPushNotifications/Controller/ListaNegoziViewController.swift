@@ -25,6 +25,9 @@ class ListaNegoziViewController: UIViewController {
         self.tblView.delegate = self
         self.tblView.dataSource = self
         self.searchBar.delegate = self
+        
+        let cellNib = UINib(nibName: "ReusableTableViewCell", bundle: nil)
+        tblView.register(cellNib, forCellReuseIdentifier: "reusableTableViewCell")
         // Do any additional setup after loading the view.
     }
 }
@@ -62,22 +65,24 @@ extension ListaNegoziViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier: String = "searchResultCell"
-        var cell: UITableViewCell! = tblView.dequeueReusableCell(withIdentifier: cellIdentifier)
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
-        }
+        let cellIdentifier: String = "reusableTableViewCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ReusableTableViewCell
+        
         if hasSearched{
             if searchResults.count == 0 {
-                cell.textLabel?.text = "Nessun negozio trovato"
+                cell.nameLabel.text = "Nessun negozio trovato"
             } else {
-                cell.textLabel?.text = searchResults[indexPath.row]
+                cell.nameLabel?.text = searchResults[indexPath.row]
             }
         } else {
-            cell.textLabel?.text = datas.stores[indexPath.row].name
+            cell.nameLabel?.text = datas.stores[indexPath.row].name
         }
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     

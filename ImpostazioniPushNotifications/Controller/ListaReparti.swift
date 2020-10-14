@@ -6,12 +6,6 @@
 //
 
 import UIKit
-//MARK: - Custom cell
-//class CustomCell: UITableViewCell{
-//    @IBOutlet weak var nameLabel: UILabel!
-//    @IBOutlet weak var pushNotificationsSwitch: UISwitch!
-//    @IBOutlet weak var selectionArrow: UIImageView!
-//}
 
 //MARK: - Controller
 class ListaReparti: UITableViewController {
