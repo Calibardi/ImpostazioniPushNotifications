@@ -11,7 +11,7 @@ struct generalModelStruct {
     var name: String? = "nil"
     var id: Int
     var onNotifications: Bool = false
-    var treshold: Int = 0
+    var treshold: Int = 1
 }
 
 //Singleton pattern
@@ -19,7 +19,7 @@ public class dataModel {
     var stores = [generalModelStruct]()
     var reparti = [generalModelStruct]()
     
-    static let sharedData = dataModel()
+    static var sharedData = dataModel()
     
     private init(){
         self.stores = [generalModelStruct(name: "Sephora", id: 00),

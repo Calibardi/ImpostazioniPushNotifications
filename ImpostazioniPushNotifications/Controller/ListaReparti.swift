@@ -11,7 +11,7 @@ import UIKit
 class ListaReparti: UITableViewController {
     
 //    MARK: - Attributi
-    let reparti = dataModel.sharedData.reparti
+    let data = dataModel.sharedData
     var selectedIndex = -1
     var isCollapse = false
     
@@ -38,7 +38,7 @@ class ListaReparti: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return reparti.count
+        return data.reparti.count
     }
     
     
@@ -48,8 +48,15 @@ class ListaReparti: UITableViewController {
             as! ReusableCustomCell
         
         // Configure the cell...
-        cell.nameLabel.text = reparti[indexPath.row].name
+        cell.nameLabel.text = data.reparti[indexPath.row].name
         cell.selectionArrow.image = UIImage(systemName: "chevron.down")
+        cell.id = data.reparti[indexPath.row].id
+        cell.notificationSwitch.isOn = dataModel.sharedData.reparti[indexPath.row].onNotifications
+        if dataModel.sharedData.reparti[indexPath.row].onNotifications {
+            cell.treshold.isEnabled = false
+        }
+        cell.treshold.value = Float(data.reparti[indexPath.row].treshold)
+        cell.tresholdLabel.text = String(data.reparti[indexPath.row].treshold)
         
         return cell
     }

@@ -35,10 +35,6 @@ class ListaNegoziViewController: UIViewController {
         tblView.register(cellNib, forCellReuseIdentifier: "reusableTableViewCell")
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func showAlert() {
-        
-    }
 }
 //MARK: - Estensioni
 extension ListaNegoziViewController: UISearchBarDelegate {
