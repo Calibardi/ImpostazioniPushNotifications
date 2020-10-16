@@ -14,6 +14,9 @@ class ReusableTableViewCell: UITableViewCell {
     @IBOutlet weak var notificationSwitch: UISwitch!
     @IBOutlet weak var tresholdSlider: UISlider!
     
+    var id: Int = Int()
+    var datas = dataModel.sharedData
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,8 +32,23 @@ class ReusableTableViewCell: UITableViewCell {
         if self.notificationSwitch.isOn == true {
             print(self.tresholdSlider.value)
             self.tresholdSlider.isEnabled = false
+            for i in 0...datas.stores.count-1 {
+                if datas.stores[i].id == self.id {
+                    datas.stores[i].onNotifications = true
+                    datas.stores[i].treshold = Int(self.tresholdSlider.value)
+                    break
+                }
+            }
         } else {
             self.tresholdSlider.isEnabled = true
+            for i in 0...datas.stores.count-1 {
+                if datas.stores[i].id == self.id {
+                    datas.stores[i].onNotifications = false
+                    datas.stores[i].treshold = 1
+                    break
+                }
+            }
+
         }
     }
     

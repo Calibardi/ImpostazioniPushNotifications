@@ -78,8 +78,7 @@ extension ListaNegoziViewController: UITableViewDelegate, UITableViewDataSource 
         
         if hasSearched{
             if searchResults.count == 0 {
-//                cell.nameLabel.text = "Nessun negozio trovato"
-                /*Soluzione errata per notificare che la ricerca non ha avuto risultati*/
+//            void
             } else {
                 cell.nameLabel?.text = searchResults[indexPath.row]
             }
